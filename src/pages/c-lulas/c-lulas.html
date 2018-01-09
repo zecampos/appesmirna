@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Células
+    </ion-title>
+    <ion-buttons end>
+      <button on-click="addCelula()" ion-button icon-only>
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+  <ion-list id="cLulas-list3">
+    <ion-item *ngFor="let item of celulas" color="none" on-click="getCelula(item.objectId)" id="cLulas-list-item2">
+      <ion-avatar item-left>
+        <img src="assets/img/house.png" />
+      </ion-avatar>
+      <h4>
+        {{item.tribo}}
+      </h4>
+      <p>Lider: {{item.lider}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

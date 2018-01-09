@@ -1,0 +1,192 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Célula
+    </ion-title>
+    <ion-buttons end>
+      <button on-click="editar()" ion-button icon-only>
+        <ion-icon  name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page9">
+  <form id="cLula-form5">
+    <ion-item id="cLula-select18">
+      <ion-label>
+        Tribo
+      </ion-label>
+      <ion-select [disabled]="disabled" [(ngModel)]="celula.tribo" name="tribo">
+        <ion-option></ion-option>
+        <ion-option>
+          Benjamin
+        </ion-option>
+        <ion-option>
+          Gade Teen
+        </ion-option>
+        <ion-option>
+          Tribo de Gade
+        </ion-option>
+        <ion-option>
+          Tribo de Débora
+        </ion-option>
+        <ion-option>
+          Tribo de Judá
+        </ion-option>
+        <ion-option>
+          Outra
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cLula-select19">
+      <ion-label>
+        Líder
+      </ion-label>
+      <ion-select [disabled]="disabled" [(ngModel)]="celula.lider" name="lider">
+        <ion-option>
+          Opção
+        </ion-option>
+        <ion-option *ngFor="let c of membro" [value]="c.nome">{{c.nome}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item id="cLula-select20">
+      <ion-label>
+        Dia
+      </ion-label>
+      <ion-select [disabled]="disabled" [(ngModel)]="celula.dia" name="dia">
+        <ion-option></ion-option>
+        <ion-option>
+          Segunda
+        </ion-option>
+        <ion-option>
+          Terça
+        </ion-option>
+        <ion-option>
+          Quarta
+        </ion-option>
+        <ion-option>
+          Quinta
+        </ion-option>
+        <ion-option>
+          Sexta
+        </ion-option>
+        <ion-option>
+          Sabádo
+        </ion-option>
+        <ion-option>
+          Domingo
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cLula-input29">
+      <ion-label>
+        Horario
+      </ion-label>
+      <ion-input type="date" [disabled]="disabled" [(ngModel)]="celula.horario" name="horario" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-select21">
+      <ion-label>
+        Periodo
+      </ion-label>
+      <ion-select [disabled]="disabled" [(ngModel)]="celula.periodo" name="periodo">
+        <ion-option></ion-option>
+        <ion-option>
+          Semanal
+        </ion-option>
+        <ion-option>
+          Quinzenal
+        </ion-option>
+        <ion-option>
+          Mensal
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cLula-input30">
+      <ion-label>
+        Quantidade de Membros
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.quantidadeMembros" name="quantidadeMembros" type="number" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-input31">
+      <ion-label>
+        Quantidade de Visitantes
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.quantidadeVisitantes" name="quantidadeVisitantes"  type="number" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-select22">
+      <ion-label>
+        Tipo de Logadouro
+      </ion-label>
+      <ion-select [disabled]="disabled" [(ngModel)]="celula.tipoLogadouro" name="tipoLogadouro">
+        <ion-option></ion-option>
+        <ion-option>
+          Rua
+        </ion-option>
+        <ion-option>
+          Travessa
+        </ion-option>
+        <ion-option>
+          Avenida
+        </ion-option>
+        <ion-option>
+          Praça
+        </ion-option>
+        <ion-option>
+          Rodovia
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cLula-input32">
+      <ion-label>
+        Nome do Logadouro
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.logadouro" name="Logadouro" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-input33">
+      <ion-label>
+        Numero
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.numero" name="numero" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-input34">
+      <ion-label>
+        Complemento
+      </ion-label>
+      <ion-input type="text" [disabled]="disabled" [(ngModel)]="celula.complemento" name="complemento" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-input35">
+      <ion-label>
+        Bairro
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.bairro"  name="bairro" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cLula-input36">
+      <ion-label>
+        Cidade
+      </ion-label>
+      <ion-input [disabled]="disabled" [(ngModel)]="celula.cidade" name="cidade" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Latitude
+      </ion-label>
+      <ion-input disabled type="number" [(ngModel)]="celula.lat"  name="lat" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Longitude
+      </ion-label>
+      <ion-input disabled type="number" [(ngModel)]="celula.lon" name="lon" placeholder=""></ion-input>
+    </ion-item>
+    <button *ngIf="ativar" on-click="getPosition()" ion-button color="success" block>
+      Atualizar Localização
+    </button>
+    <button *ngIf="ativar"  on-click="salvarCelula(celula.objectId)" id="cLula-button11" ion-button color="positive" block>
+      Salvar
+    </button>
+    <button *ngIf="ativar" on-click="excluir(celula.objectId)" id="membro-button9"  ion-button color="danger" block>
+      Excluir
+    </button>
+  </form>
+</ion-content>

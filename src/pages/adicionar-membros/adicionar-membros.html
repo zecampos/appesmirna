@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Adicionar Membros
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <form id="adicionarMembros-form2">
+    <ion-item id="adicionarMembros-input3">
+      <ion-label>
+        Nome Completo
+      </ion-label>
+      <ion-input [(ngModel)]="membro.nome" name="nome" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input4">
+      <ion-label>
+        Data Nasc.
+      </ion-label>
+      <ion-input [(ngModel)]="membro.dataNasc" name="dataNasc" type="date" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-select1">
+      <ion-label>
+        Sexo
+      </ion-label>
+      <ion-select [(ngModel)]="membro.sexo" name="sexo">
+        <ion-option></ion-option>
+        <ion-option>
+          Masculino
+        </ion-option>
+        <ion-option>
+          Feminino
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-select2">
+      <ion-label>
+        Estado Civíl
+      </ion-label>
+      <ion-select [(ngModel)]="membro.estadoCivil" name="estadoCivil">
+        <ion-option></ion-option>
+        <ion-option>
+          Solteiro(a)
+        </ion-option>
+        <ion-option>
+          Casado(a)
+        </ion-option>
+        <ion-option>
+          Viúvo(a)
+        </ion-option>
+        <ion-option>
+          Divorciado(a)
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-select3">
+      <ion-label>
+        É batizado
+      </ion-label>
+      <ion-select [(ngModel)]="membro.batizado" name="batizado">
+        <ion-option></ion-option>
+        <ion-option>
+          Sim
+        </ion-option>
+        <ion-option>
+          Não
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-select4">
+      <ion-label>
+        Ja fez escola de Lideres
+      </ion-label>
+      <ion-select [(ngModel)]="membro.escola" name="escola">
+        <ion-option></ion-option>
+        <ion-option>
+          Sim
+        </ion-option>
+        <ion-option>
+          Não
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-select5">
+      <ion-label>
+        Participa de Célula
+      </ion-label>
+      <ion-select [(ngModel)]="membro.celula" name="celula">
+        <ion-option></ion-option>
+        <ion-option>
+          Sim
+        </ion-option>
+        <ion-option>
+          Não
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-input5">
+      <ion-label>
+        Telefone Fixo
+      </ion-label>
+      <ion-input [(ngModel)]="membro.telFixo" type="tel" placeholder="" name="telFixo"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input6">
+      <ion-label>
+        Telefone Celular
+      </ion-label>
+      <ion-input [(ngModel)]="membro.telCelular" type="tel" placeholder="" name="telCelular"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-select6">
+      <ion-label>
+        Tipo de Logadouro
+      </ion-label>
+      <ion-select [(ngModel)]="membro.tipoLogadouro" name="tipoLogadouro">
+        <ion-option></ion-option>
+        <ion-option>
+          Rua
+        </ion-option>
+        <ion-option>
+          Travessa
+        </ion-option>
+        <ion-option>
+          Avenida
+        </ion-option>
+        <ion-option>
+          Rodovia
+        </ion-option>
+        <ion-option>
+          Praça
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="adicionarMembros-input7">
+      <ion-label>
+        Nome do Logadouro
+      </ion-label>
+      <ion-input [(ngModel)]="membro.logadouro" type="text" placeholder="" name="logadouro"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input8">
+      <ion-label>
+        Numero
+      </ion-label>
+      <ion-input [(ngModel)]="membro.numero" type="text" placeholder="" name="numero"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input9">
+      <ion-label>
+        Complemento
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="membro.complemento" placeholder="" name="complemento"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input10">
+      <ion-label>
+        Bairro
+      </ion-label>
+      <ion-input [(ngModel)]="membro.bairro" type="text" placeholder="" name="bairro"></ion-input>
+    </ion-item>
+    <ion-item id="adicionarMembros-input11">
+      <ion-label>
+        Cidade
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="membro.cidade" placeholder="" name="cidade"></ion-input>
+    </ion-item>
+    <button on-click="cadastrarmembro()" ion-button color="positive" block>
+      Cadastrar
+    </button>
+  </form>
+</ion-content>

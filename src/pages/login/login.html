@@ -1,0 +1,22 @@
+<ion-content padding id="page2">
+  <form id="login-form1">
+    <img src="assets/img/1RhfitRQC8fZv27KxLA7_logo.png" style="display:block;width:75%;height:auto;margin-left:auto;margin-right:auto;" />
+    <ion-list id="login-list1">
+      <ion-item id="login-input1">
+        <ion-label>
+          Usuário
+        </ion-label>
+        <ion-input [(ngModel)]="username" type="text" placeholder="" name="username"></ion-input>
+      </ion-item>
+      <ion-item id="login-input2">
+        <ion-label>
+        Senha
+        </ion-label>
+        <ion-input [(ngModel)]="senha" name="senha" type="password" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="login-button1" ion-button color="positive" block on-click="logar(username,senha)">
+      Entrar
+    </button>
+  </form>
+</ion-content>

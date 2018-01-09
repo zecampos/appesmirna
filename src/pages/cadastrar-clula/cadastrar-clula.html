@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastrar Célula
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8">
+  <form id="cadastrarCLula-form4">
+    <ion-item id="cadastrarCLula-select13">
+      <ion-label>
+        Tribo
+      </ion-label>
+      <ion-select >
+        <ion-option></ion-option>
+        <ion-option>
+          Benjamin
+        </ion-option>
+        <ion-option>
+          Gade Teen
+        </ion-option>
+        <ion-option>
+          Tribo de Gade
+        </ion-option>
+        <ion-option>
+          Tribo de Débora
+        </ion-option>
+        <ion-option>
+          Tribo de Judá
+        </ion-option>
+        <ion-option>
+          Outra
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cadastrarCLula-select14">
+      <ion-label>
+        Líder
+      </ion-label>
+
+      <ion-select [(ngModel)]="celula.lider" name="lider">
+        <ion-option>
+          Opção
+        </ion-option>
+        <ion-option *ngFor="let c of membro" [value]="c.nome">{{c.nome}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item id="cadastrarCLula-select15">
+      <ion-label>
+        Dia
+      </ion-label>
+      <ion-select [(ngModel)]="celula.dia" name="dia">
+        <ion-option></ion-option>
+        <ion-option>
+          Segunda
+        </ion-option>
+        <ion-option>
+          Terça
+        </ion-option>
+        <ion-option>
+          Quarta
+        </ion-option>
+        <ion-option>
+          Quinta
+        </ion-option>
+        <ion-option>
+          Sexta
+        </ion-option>
+        <ion-option>
+          Sabádo
+        </ion-option>
+        <ion-option>
+          Domingo
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input21">
+      <ion-label>
+        Horario
+      </ion-label>
+
+      <ion-datetime displayFormat="HH" [(ngModel)]="celula.hora" name="hora" ></ion-datetime>
+    </ion-item>
+    <ion-item id="cadastrarCLula-select16">
+      <ion-label>
+        Periodo
+      </ion-label>
+      <ion-select [(ngModel)]="celula.periodo" name="periodo">
+        <ion-option></ion-option>
+        <ion-option>
+          Semanal
+        </ion-option>
+        <ion-option>
+          Quinzenal
+        </ion-option>
+        <ion-option>
+          Mensal
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input22">
+      <ion-label>
+        Quantidade de Membros
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="celula.quantidadeMembros" name="quantidadeMembros" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input23">
+      <ion-label>
+        Quantidade de Visitantes
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="celula.quantidadeVisitantes" name="quantidadeVisitantes" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-select17">
+      <ion-label>
+        Tipo de Logadouro
+      </ion-label>
+      <ion-select [(ngModel)]="celula.tipoLogadouro" name="tipoLogadouro">
+        <ion-option></ion-option>
+        <ion-option>
+          Rua
+        </ion-option>
+        <ion-option>
+          Travessa
+        </ion-option>
+        <ion-option>
+          Avenida
+        </ion-option>
+        <ion-option>
+          Praça
+        </ion-option>
+        <ion-option>
+          Rodovia
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input24">
+      <ion-label>
+        Nome do Logadouro
+      </ion-label>
+      <ion-input [(ngModel)]="celula.logadouro" name="Logadouro" type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input25">
+      <ion-label>
+        Numero
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="celula.numero" name="numero" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input26">
+      <ion-label>
+        Complemento
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="celula.complemento" name="complemento" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input27">
+      <ion-label>
+        Bairro
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="celula.bairro"  name="bairro" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="cadastrarCLula-input28">
+      <ion-label>
+        Cidade
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="celula.cidade" name="cidade" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Latitude
+      </ion-label>
+      <ion-input disabled type="number" [(ngModel)]="celula.lat"  name="lat" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Longitude
+      </ion-label>
+      <ion-input disabled type="number" [(ngModel)]="celula.lon" name="lon" placeholder=""></ion-input>
+    </ion-item>
+    <button on-click="getPosition()" ion-button color="success" block>
+      Buscar Localização
+    </button>
+    <button on-click="cadastrarCelula()" id="cadastrarCLula-button10" ion-button color="positive" block>
+      Cadastrar
+    </button>
+  </form>
+</ion-content>

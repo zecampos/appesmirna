@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Membros
+    </ion-title>
+    <ion-buttons end>
+      <button on-click="goToAddmembro()" ion-button icon-only>
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <ion-spinner hidden="disabled"  name="crescent"> Carregando...</ion-spinner>
+  <ion-list *ngFor="let item of membro" id="membros-list2">
+    <ion-item color="none" on-click="getMembro(item.objectId)" id="membros-list-item1">
+      <ion-avatar item-left>
+        <div *ngIf="item.sexo=='Feminino';then feminino else masculino">
+
+      </div>
+      <ng-template #masculino>
+      <img  src="assets/img/masculino.png"/>
+      </ng-template>
+        <ng-template #feminino>
+          <img  src="assets/img/feminino.png"/>
+        </ng-template>
+      </ion-avatar>
+      <h2>
+        {{item.nome}}
+      </h2>
+      <p>{{item.sexo}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
